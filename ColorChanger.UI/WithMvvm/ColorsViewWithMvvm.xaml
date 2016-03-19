@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="ColorChanger.UI.WithMvvm.ColorsViewWithMvvm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:withMvvm="clr-namespace:ColorChanger.UI.WithMvvm"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="10">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            <Style  TargetType="Slider">
+                <Setter Property="Minimum" Value="0"/>
+                <Setter Property="Maximum" Value="255"/>
+                <Setter Property="Value" Value="100"/>
+            </Style>
+            <withMvvm:ColorToBrushConverter x:Key="ColorToBrushConverter"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Margin="20" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   Fill="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"/>
+        <TextBlock Text="Red" Grid.Row="1" Grid.Column="0" />
+        <Slider Grid.Row="1" Grid.Column="1" Value="{Binding Red}"/>
+        <TextBlock Text="Green" Grid.Row="2" Grid.Column="0" />
+        <Slider Grid.Row="2" Grid.Column="1" Value="{Binding Green}"/>
+        <TextBlock Text="Blue" Grid.Row="3" Grid.Column="0" />
+        <Slider Grid.Row="3" Grid.Column="1" Value="{Binding Blue}"/>
+    </Grid>
+</UserControl>
