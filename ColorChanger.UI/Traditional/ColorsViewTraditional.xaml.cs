@@ -49,9 +49,9 @@ namespace ColorChanger.UI.Traditional
         private void InitColors()
         {
             Random r = new Random();
-            SliderRed.Value = r.Next(0, byte.MaxValue);
-            SliderGreen.Value = r.Next(0, byte.MaxValue);
-            SliderBlue.Value = r.Next(0, byte.MaxValue);
+            SliderRed.Value = r.Next(byte.MinValue, byte.MaxValue);
+            SliderGreen.Value = r.Next(byte.MinValue, byte.MaxValue);
+            SliderBlue.Value = r.Next(byte.MinValue, byte.MaxValue);
         }
 
         private void ChangeColor()
