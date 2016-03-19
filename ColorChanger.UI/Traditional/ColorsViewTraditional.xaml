@@ -26,7 +26,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Margin="20" x:Name="ColorRectangle" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Rectangle Margin="10" x:Name="ColorRectangle" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
         <TextBlock Text="Red" Grid.Row="1" Grid.Column="0" />
         <Slider x:Name="SliderRed" Grid.Row="1" Grid.Column="1"/>
         <TextBlock Text="Green" Grid.Row="2" Grid.Column="0" />

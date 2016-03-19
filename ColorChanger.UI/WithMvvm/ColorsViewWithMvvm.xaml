@@ -28,7 +28,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Margin="20" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+        <Rectangle Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                    Fill="{Binding Color, Converter={StaticResource ColorToBrushConverter}}"/>
         <TextBlock Text="Red" Grid.Row="1" Grid.Column="0" />
         <Slider Grid.Row="1" Grid.Column="1" Value="{Binding Red}"/>
